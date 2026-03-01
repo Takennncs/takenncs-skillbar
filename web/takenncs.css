@@ -1,0 +1,126 @@
+@import "https://assets.nopixel.net/web/fonts/gilroy/stylesheet.css";
+
+body {
+  font-family: "Gilroy";
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+}
+
+.hacking-container {
+  display: none;
+  position: relative;
+  padding: 1.5vw;
+  border-radius: 0.3vw;
+  width: 40vw;
+  height: 2.8vw;
+  top: 95vh;
+  left: 45vw;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.button-press {
+  display: inline-block;
+  width: 3vw;
+  height: 3.5vw;
+  border-radius: 0.2vw;
+  background: linear-gradient(145deg, rgba(255, 162, 0, 0.9), rgba(255, 187, 0, 0.9));
+  border: 1px solid rgba(255, 170, 0, 0.6);
+  box-shadow: 0 0 10px rgba(255, 213, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 0 5px rgba(255, 153, 0, 0.5);
+  position: relative;
+  top: -0.25vw;
+  transition: all 0.2s ease;
+}
+
+.button-press:hover {
+  background: linear-gradient(145deg, rgba(255, 157, 0, 0.9), rgba(255, 145, 0, 0.9));
+  box-shadow: 0 0 15px rgba(242, 158, 2, 0.5);
+  transform: scale(1.05);
+}
+
+.timeline {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 60vw;
+  height: 3.5vw;
+  margin-left: 4vw;
+  border-radius: 0.3vw;
+  background: rgba(230, 151, 4, 0.252);
+  outline: 1px solid rgba(255, 183, 0, 0.8);
+  box-shadow: inset 0 0 10px rgba(255, 179, 0, 0.5);
+}
+
+.moving-square {
+  position: absolute;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 0.2vw;
+  background: linear-gradient(145deg, rgba(255, 123, 0, 0.9), rgba(255, 149, 0, 0.9));
+  border: 1px solid rgba(243, 157, 11, 0.6);
+  box-shadow: 0 0 10px 0px rgba(239, 183, 16, 0.7);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 1.5vw;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+  margin-left: 0.1vw;
+  transition: margin-left 0.05s linear, scale 0.3s ease-in-out, transform 0.2s ease;
+  z-index: 2;
+}
+
+.moving-square:hover {
+  transform: scale(1.1);
+}
+
+.square-slot {
+  display: none;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 0.2vw;
+  background: rgba(25, 35, 45, 0.5);
+  border: 1px solid rgba(255, 145, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 150, 200, 0.3);
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw;
+  color: white;
+  margin-left: 3.75vw;
+  position: relative;
+  z-index: 1;
+}
+
+.square-slot::before,
+.square-slot::after {
+  content: "";
+  position: absolute;
+  width: 2vw;
+  height: 0.15vw;
+  background: linear-gradient(to right, rgba(233, 233, 233, 0.7), rgba(255, 255, 255, 0.7));
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.square-slot::before {
+  top: -0.15vw;
+}
+
+.square-slot::after {
+  bottom: -0.15vw;
+}
+
+.other-container {
+  display: none;
+  align-items: left;
+  justify-content: left;
+  gap: 1vw;
+  margin-top: 1vw;
+}
+
